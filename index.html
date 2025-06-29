@@ -51,7 +51,7 @@
     }
 
     .appliance-table {
-      min-width: 650px;
+      min-width: 400px;
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
@@ -62,7 +62,7 @@
       border: 1px solid #ccc;
       padding: 4px 0px;
       text-align: center;
-      width: 60px;
+      /* width: 60px; */
     }
 
     .appliance-table th {
@@ -72,10 +72,10 @@
     .appliance-table tr td input {
       border: none;
       background-color: unset;
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 17px;
+      font-weight: 700;
       text-align: center;
-      width: 100% !important;
+      width: 50px !important;
     }
 
     .section_solar button {
@@ -261,10 +261,10 @@
     appliances.forEach(app => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td>${app.name}</td>
-        <td><input type="number" value="${app.watt}" disabled></td>
-        <td><input class="quantity_num" placeholder="Enter Quantity" type="number" id="${app.id}" value="" oninput="calculateLoad()"></td>
-        <td><span id="${app.id}_total">0</span></td>`;
+        <td style="width: 24%;">${app.name}</td>
+        <td style="width: 15%;"><input type="number" value="${app.watt}" disabled td>
+        <td style="width: 15%;"><input class="quantity_num" placeholder="Enter Quantity" type="number" id="${app.id}" value="" oninput="calculateLoad()""></td>
+        <td style="width: 15%;"><span id="${app.id}_total">0</span></td>`;
       applianceList.appendChild(row);
     });
 
